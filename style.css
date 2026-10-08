@@ -23,6 +23,29 @@ body {
   font: 17px/1.5 -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
+/* The soft glow of the store images, in the white belt's colours: light, grey and green. */
+.home::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(60rem 36rem at 0% 0%, rgba(255, 255, 255, 0.95), transparent 70%),
+    radial-gradient(40rem 30rem at 100% 30%, rgba(201, 205, 214, 0.7), transparent 70%),
+    radial-gradient(36rem 28rem at 0% 100%, rgba(168, 221, 184, 0.55), transparent 70%),
+    #e6e7eb;
+}
+@media (prefers-color-scheme: dark) {
+  .home::before {
+    background:
+      radial-gradient(60rem 36rem at 0% 0%, rgba(44, 44, 46, 0.9), transparent 70%),
+      radial-gradient(40rem 30rem at 100% 30%, rgba(72, 72, 74, 0.4), transparent 70%),
+      radial-gradient(36rem 28rem at 0% 100%, rgba(48, 209, 88, 0.16), transparent 70%),
+      #050505;
+  }
+}
+.home { background: transparent; }
+h1, .pitch { text-wrap: balance; }
 main {
   flex: 1;
   width: 100%;
@@ -58,6 +81,7 @@ h1 {
   height: auto;
   border-radius: 1.5rem;
   scroll-snap-align: center;
+  box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.14);
 }
 .beta { padding: 1.25rem 1.5rem 1.5rem; border-radius: 1.625rem; background: var(--card); }
 .beta h2 { margin: 0 0 0.75rem; font-size: 1.375rem; font-weight: 700; }
