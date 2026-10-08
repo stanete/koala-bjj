@@ -71,7 +71,8 @@ h1 {
   gap: 0.75rem;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  padding: 0.5rem max(1.5rem, calc((100vw - 31rem) / 2)) 1rem;
+  padding: 1.5rem max(1.5rem, calc((100vw - 31rem) / 2)) 3.5rem;
+  margin: -1rem 0 -2.5rem;
   scrollbar-width: none;
 }
 .gallery::-webkit-scrollbar { display: none; }
